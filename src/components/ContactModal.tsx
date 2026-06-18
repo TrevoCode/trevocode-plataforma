@@ -20,6 +20,7 @@ import {
   MessageCircle,
   Phone,
   Mail,
+  Video,
 } from "lucide-react";
 
 /* ============================================================
@@ -47,6 +48,7 @@ const horarios = [
 const contatos = [
   { id: "whatsapp", label: "WhatsApp", Icon: MessageCircle },
   { id: "ligacao", label: "Ligação", Icon: Phone },
+  { id: "meet", label: "Meet", Icon: Video },
   { id: "email", label: "E-mail", Icon: Mail },
 ] as const;
 
