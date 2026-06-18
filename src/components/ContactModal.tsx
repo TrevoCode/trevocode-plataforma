@@ -135,7 +135,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
       <Dialog.Root open={isOpen} onOpenChange={handleOpenChange}>
         <Dialog.Portal>
           <Dialog.Backdrop className="fixed inset-0 z-[60] bg-neutral-950/55 backdrop-blur-sm data-[starting-style]:opacity-0 data-[ending-style]:opacity-0 transition-opacity duration-300" />
-          <Dialog.Popup className="fixed left-1/2 top-1/2 z-[61] w-[calc(100vw-2rem)] max-w-lg max-h-[90vh] overflow-y-auto -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-6 sm:p-8 shadow-2xl shadow-black/30 outline-none data-[starting-style]:opacity-0 data-[starting-style]:scale-95 data-[ending-style]:opacity-0 data-[ending-style]:scale-95 transition-all duration-300 ease-out">
+          <Dialog.Popup className="fixed right-0 top-0 bottom-0 z-[61] w-full max-w-md overflow-y-auto bg-white p-6 sm:p-8 shadow-2xl shadow-black/30 outline-none rounded-l-3xl data-[starting-style]:translate-x-full data-[ending-style]:translate-x-full transition-transform duration-300 ease-out">
             <Dialog.Close
               className="absolute right-4 top-4 grid place-items-center w-9 h-9 rounded-full text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700 transition-colors"
               aria-label="Fechar"
