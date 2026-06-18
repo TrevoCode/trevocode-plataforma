@@ -233,7 +233,7 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
                       className="mt-0.5 w-5 h-5 rounded-md border-neutral-300 text-green-600 focus:ring-green-500/30 accent-green-600"
                     />
                     <span className="text-sm text-neutral-700 leading-snug">
-                      Ainda não sei ao certo — prefiro conversar primeiro.
+                      Ainda não sei ao certo, prefiro conversar primeiro.
                     </span>
                   </label>
 
