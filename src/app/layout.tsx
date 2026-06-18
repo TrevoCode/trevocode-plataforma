@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { site } from "@/content/site";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { ContactModalProvider } from "@/components/ContactModal";
 import "./globals.css";
 
 const inter = Inter({
@@ -85,7 +86,7 @@ export default function RootLayout({
         >
           Pular para conteúdo
         </a>
-        {children}
+        <ContactModalProvider>{children}</ContactModalProvider>
       </body>
     </html>
   );

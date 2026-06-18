@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { HeroLeadForm } from "@/components/HeroLeadForm";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { CursorSpotlight } from "@/components/CursorSpotlight";
+import { StartProjectButton } from "@/components/StartProjectButton";
 import { ScrollTimeline } from "@/components/ScrollTimeline";
 import { SiteFooter } from "@/components/SiteFooter";
 import { site } from "@/content/site";
@@ -577,15 +578,10 @@ export default function Home() {
             </h2>
             <p className="mt-7 text-lg text-white/70 max-w-xl mx-auto">{site.finalCta.subtitle}</p>
             <div className="mt-10">
-              <a
-                href={wa}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-green-500 hover:bg-green-400 text-neutral-950 h-16 px-10 text-lg font-bold transition-all hover:-translate-y-0.5"
-              >
+              <StartProjectButton className="inline-flex items-center justify-center gap-2 rounded-full bg-green-500 hover:bg-green-400 text-neutral-950 h-16 px-10 text-lg font-bold transition-all hover:-translate-y-0.5">
                 <MessageCircle className="w-5 h-5" />
                 {site.finalCta.cta}
-              </a>
+              </StartProjectButton>
               <p className="mt-4 text-xs text-white/50 tracking-wide">{site.finalCta.note}</p>
             </div>
           </Reveal>

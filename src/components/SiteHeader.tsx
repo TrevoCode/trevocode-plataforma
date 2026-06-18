@@ -5,6 +5,7 @@ import { site } from "@/content/site";
 import { niches } from "@/content/niches";
 import { posts } from "@/content/posts";
 import { Logo } from "@/components/Logo";
+import { StartProjectButton } from "@/components/StartProjectButton";
 import {
   Menu,
   X,
@@ -193,13 +194,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <a
-            href="/#contato"
-            className="inline-flex items-center gap-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white h-10 px-5 text-sm font-semibold transition-colors"
-          >
+          <StartProjectButton className="inline-flex items-center gap-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white h-10 px-5 text-sm font-semibold transition-colors">
             Começar um projeto
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </StartProjectButton>
         </div>
 
         <button
@@ -252,14 +250,13 @@ export function SiteHeader() {
               Ver todos os posts →
             </a>
 
-            <a
-              href="/#contato"
+            <StartProjectButton
               onClick={() => setOpen(false)}
-              className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 text-white h-12 text-base font-semibold"
+              className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 text-white h-12 text-base font-semibold"
             >
               Começar um projeto
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </StartProjectButton>
           </nav>
         </div>
       )}
