@@ -40,6 +40,7 @@ import {
   GraduationCap,
   Lightbulb,
   TrendingUp,
+  X,
 } from "lucide-react";
 import { niches } from "@/content/niches";
 
@@ -290,6 +291,52 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ============== PRATELEIRA VS SOB MEDIDA ============== */}
+        <section className="py-20 lg:py-28 max-w-7xl mx-auto px-4 lg:px-6">
+          <Reveal className="text-center mb-12 lg:mb-16">
+            <p className="text-xs tracking-[0.2em] uppercase text-green-600 font-semibold mb-4">
+              {site.comparison.eyebrow}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl mx-auto leading-tight">
+              {site.comparison.title}
+            </h2>
+            <p className="mt-5 text-neutral-600 max-w-xl mx-auto">{site.comparison.subtitle}</p>
+          </Reveal>
+
+          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+            <Reveal dir="left">
+              <div className="h-full rounded-3xl border border-neutral-200 bg-neutral-50 p-8">
+                <span className="inline-flex items-center rounded-full bg-neutral-200 text-neutral-600 text-[10px] font-bold tracking-wider uppercase px-3 py-1 mb-6">
+                  {site.comparison.shelf.label}
+                </span>
+                <ul className="space-y-4">
+                  {site.comparison.shelf.items.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-neutral-500">
+                      <X className="w-5 h-5 text-neutral-400 shrink-0 mt-0.5" strokeWidth={2.5} />
+                      <span className="leading-snug">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+            <Reveal dir="right" delay={120}>
+              <div className="h-full rounded-3xl border-2 border-green-500 bg-white p-8 shadow-xl shadow-green-900/5">
+                <span className="inline-flex items-center rounded-full bg-green-600 text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 mb-6">
+                  {site.comparison.custom.label}
+                </span>
+                <ul className="space-y-4">
+                  {site.comparison.custom.items.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-neutral-800 font-medium">
+                      <Check className="w-5 h-5 text-green-600 shrink-0 mt-0.5" strokeWidth={2.5} />
+                      <span className="leading-snug">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           </div>
         </section>
 

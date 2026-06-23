@@ -16,7 +16,7 @@ export const site = {
       "Você imagina, a gente desenvolve. Especialistas em Inteligência Artificial que criam apps, sites e sistemas sob medida pro seu negócio crescer.",
     url: "https://trevocode.com",
     email: "contato@exemplo.com", // ⚠️ trocar pelo e-mail real
-    whatsapp: "5599999999999", // ⚠️ trocar pelo número real (formato internacional)
+    whatsapp: "5511983882695", // (11) 98388-2695
   },
 
   nav: [
@@ -31,7 +31,7 @@ export const site = {
     titleLines: ["Você imagina."],
     titleEmphasis: "A gente desenvolve.",
     subtitle:
-      "Apps, sites e sistemas feitos sob medida pra sua empresa. Você conta o que precisa, a gente transforma em tecnologia que trabalha por você.",
+      "Seu sistema, não um sistema. A gente constrói a plataforma sob medida que cabe na sua operação e cresce com você. Nada de software de prateleira que obriga a sua empresa a se encaixar.",
     ctaPrimary: "Quero uma solução",
     ctaSecondary: "Ver o que já fizemos",
   },
@@ -86,7 +86,7 @@ export const site = {
     title: "Um mosaico de soluções.",
     titleMuted: "Pra cada tipo de negócio.",
     subtitle:
-      "Do delivery à fintech, da clínica ao e-commerce, montamos a solução certa pro seu setor. E o que ninguém mais entrega: IA de verdade embarcada.",
+      "Do delivery à fintech, da clínica ao e-commerce, a gente constrói o sistema sob medida pro seu setor. Não um modelo de prateleira: a plataforma que cabe na sua operação, com IA de verdade embarcada.",
     items: [
       { key: "apps", icon: "Smartphone", title: "Apps iOS & Android", desc: "Apps nativos publicados nas lojas, com backend, push e atualizações.", ai: false },
       { key: "saas", icon: "LayoutGrid", title: "Plataformas SaaS", desc: "Multi-tenant, billing recorrente e painel completo.", ai: false },
@@ -192,7 +192,7 @@ export const site = {
     eyebrow: "O diferencial",
     title: "IA não é enfeite. É o nosso método.",
     subtitle:
-      "Construímos com IA no fluxo de trabalho inteiro, o que antes levava meses, entregamos em semanas, com qualidade de quem revisa cada linha.",
+      "Software de prateleira é feito pra média do mercado. A gente constrói sob medida pra sua operação, com IA no fluxo inteiro. O que antes levava meses, entregamos em semanas, revisando cada linha.",
     items: [
       {
         title: "Velocidade real",
@@ -211,6 +211,34 @@ export const site = {
         desc: "Arquitetura com camadas de segurança e LGPD pensadas desde o começo, não remendadas depois do vazamento.",
       },
     ],
+  },
+
+  // Bloco dedicado: prateleira vs sob medida
+  comparison: {
+    eyebrow: "Prateleira vs sob medida",
+    title: "Seu sistema, não um sistema.",
+    subtitle:
+      "O mesmo investimento, dois caminhos. Um te encaixa numa caixa pronta. O outro é construído pra você.",
+    shelf: {
+      label: "Software de prateleira",
+      items: [
+        "Você molda a empresa ao software.",
+        "Paga por recursos que nunca vai usar.",
+        "Trava quando a operação cresce.",
+        "O mesmo sistema do seu concorrente.",
+        "Fila de suporte genérico.",
+      ],
+    },
+    custom: {
+      label: "Sob medida TrevoCode",
+      items: [
+        "A gente molda o software à sua empresa.",
+        "Cada recurso pensado pra sua operação.",
+        "Escala junto com o seu negócio.",
+        "Uma vantagem que é só sua.",
+        "Quem construiu te atende direto.",
+      ],
+    },
   },
 
   process: {
