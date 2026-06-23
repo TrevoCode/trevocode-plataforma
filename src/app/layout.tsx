@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { site } from "@/content/site";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { ContactModalProvider } from "@/components/ContactModal";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import "./globals.css";
 
 const inter = Inter({
@@ -87,6 +88,7 @@ export default function RootLayout({
           Pular para conteúdo
         </a>
         <ContactModalProvider>{children}</ContactModalProvider>
+        <FloatingWhatsApp />
       </body>
     </html>
   );
