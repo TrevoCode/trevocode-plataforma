@@ -122,12 +122,19 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
     e.preventDefault();
     setStatus("sending");
 
-    // TODO(envio): plugar aqui o POST pra /api/contact (Resend) quando o e-mail estiver pronto.
-    // const data = Object.fromEntries(new FormData(e.currentTarget));
-    // await fetch("/api/contact", { method: "POST", body: JSON.stringify({ ...data, horario, contato, conversar }) });
-    await new Promise((r) => setTimeout(r, 650)); // simula envio (visual)
-
-    setStatus("sent");
+    try {
+      const data = Object.fromEntries(new FormData(e.currentTarget));
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, horario, contato, conversar }),
+      });
+      if (!res.ok) throw new Error("falha no envio");
+      setStatus("sent");
+    } catch {
+      setStatus("idle");
+      alert("Não foi possível enviar agora. Tente de novo ou chame a gente no WhatsApp.");
+    }
   }
 
   return (
