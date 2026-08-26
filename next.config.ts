@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { ofertas } from "./src/content/ofertas";
 
 // Content-Security-Policy pragmática: trava canais de exfiltração (connect-src),
 // clickjacking (frame-ancestors), injeção de <base>/form e plugins.
@@ -49,6 +50,13 @@ const nextConfig: NextConfig = {
         hostname: "**.googleusercontent.com",
       },
     ],
+  },
+  async redirects() {
+    return Object.entries(ofertas).map(([slug, destination]) => ({
+      source: `/oferta/${slug}`,
+      destination,
+      statusCode: 301,
+    }));
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
