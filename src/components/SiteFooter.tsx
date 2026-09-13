@@ -14,6 +14,15 @@ export function SiteFooter() {
               </span>
             </a>
             <p className="mt-4 text-sm text-white/60 leading-relaxed">{site.footer.tagline}</p>
+            {/* Selo da parceria Stone: compromisso assumido no cadastro de parceiro.
+                Servido do próprio domínio porque a CSP do site só aceita img-src 'self'. */}
+            <img
+              src="/selos/stone-official-partner.png"
+              alt="Stone official partner"
+              width={148}
+              height={71}
+              className="mt-6 w-[148px] h-auto"
+            />
           </div>
           <div className="grid grid-cols-2 gap-10 text-sm">
             {site.footer.columns.map((col) => (
