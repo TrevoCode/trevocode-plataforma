@@ -9,7 +9,9 @@ const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://*.supabase.co https://*.supabase.in https://*.googleusercontent.com",
+  // storage.googleapis.com: selo do Stone Partner Program. O manual deles pede o link,
+  // não uma cópia, porque a imagem troca sozinha quando a parceria muda de nível.
+  "img-src 'self' data: blob: https://*.supabase.co https://*.supabase.in https://*.googleusercontent.com https://storage.googleapis.com",
   "font-src 'self' data:",
   "connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co",
   "frame-ancestors 'none'",

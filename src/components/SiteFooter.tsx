@@ -15,9 +15,11 @@ export function SiteFooter() {
             </a>
             <p className="mt-4 text-sm text-white/60 leading-relaxed">{site.footer.tagline}</p>
             {/* Selo da parceria Stone: compromisso assumido no cadastro de parceiro.
-                Servido do próprio domínio porque a CSP do site só aceita img-src 'self'. */}
+                Carregado da URL do Partner Hub, e não de uma cópia local, porque o manual
+                do selo pede o link: é assim que a imagem se atualiza sozinha quando a
+                parceria sobe de nível. A CSP precisou liberar storage.googleapis.com. */}
             <img
-              src="/selos/stone-official-partner.png"
+              src="https://storage.googleapis.com/partnerhub_partner_badges_prod/D_6a5fdec8dafb5ec77d42c0a7.png"
               alt="Stone official partner"
               width={148}
               height={71}
